@@ -23,3 +23,23 @@ datasource db {
 5. Acessando Dados com Prisma: Agora, você pode acessar e manipular dados usando o Prisma como faria normalmente. Use os modelos definidos no arquivo schema.prisma para realizar operações de leitura, escrita, atualização e exclusão de dados.
 
 **Embora o Prisma não ofereça suporte direto a ODBC, você pode integrá-lo com drivers ODBC para se conectar a uma variedade de bancos de dados SQL.**
+
+# ORM
+
+O Prisma ORM é uma poderosa ferramenta de mapeamento objeto-relacional (ORM) para Node.js e TypeScript. Ele simplifica a interação com bancos de dados SQL e oferece uma interface de programação de aplicativos (API) intuitiva e segura para realizar operações com o banco de dados.
+
+### Principais recursos: 
+
+1. Type-safe Queries: O Prisma utiliza tipos TypeScript para garantir a segurança e a integridade dos dados, permitindo que você escreva consultas SQL de forma segura e sem erros.
+
+2. Migrations Automáticas: O Prisma gerencia automaticamente as migrações do banco de dados, facilitando a evolução da estrutura do banco de dados conforme o desenvolvimento da aplicação.
+
+3. Relacionamentos e Associações: Suporta definição de relacionamentos entre modelos de dados de forma fácil e intuitiva, como um-para-um, um-para-muitos e muitos-para-muitos.
+
+4. Performance Otimizada: Oferece um mecanismo eficiente para executar consultas SQL, minimizando a sobrecarga e garantindo um desempenho otimizado.
+
+5. Integração com Pré-compiladores: Pode ser integrado facilmente com ferramentas de pré-compilação, como o GraphQL Nexus, para facilitar o desenvolvimento de APIs GraphQL.
+
+## Framework 
+
+Fastify é um framework web para Node.js, conhecido por sua velocidade e eficiência. Desenvolvido para lidar com cargas de trabalho intensivas com rapidez e eficácia, ele oferece uma alternativa leve e de alto desempenho para construir aplicativos web em JavaScript.
