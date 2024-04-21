@@ -39,7 +39,3 @@ O Prisma ORM é uma poderosa ferramenta de mapeamento objeto-relacional (ORM) pa
 4. Performance Otimizada: Oferece um mecanismo eficiente para executar consultas SQL, minimizando a sobrecarga e garantindo um desempenho otimizado.
 
 5. Integração com Pré-compiladores: Pode ser integrado facilmente com ferramentas de pré-compilação, como o GraphQL Nexus, para facilitar o desenvolvimento de APIs GraphQL.
-
-## Framework 
-
-Fastify é um framework web para Node.js, conhecido por sua velocidade e eficiência. Desenvolvido para lidar com cargas de trabalho intensivas com rapidez e eficácia, ele oferece uma alternativa leve e de alto desempenho para construir aplicativos web em JavaScript.
