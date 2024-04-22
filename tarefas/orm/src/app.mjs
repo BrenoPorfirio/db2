@@ -29,7 +29,7 @@ async function inserirFuncionariosGerentes() {
 // Atualizar Gerentes de Departamentos
 async function atualizarGerentesDepartamentos() {
   await prisma.departamento.updateMany({
-    where: { OR: [{ sigla: 'DHC' }, { sigla: 'DCT' }] },
+    where: { OR: [{ sigla: 'DHC' }, { sigla: 'DCT' }, { sigla: 'DGC' }, { sigla: 'DIR'}], },
     data: { gerenteId: 1 }, // Altere o ID do gerente conforme necessário
   });
 }
@@ -48,7 +48,22 @@ async function inserirFuncionarios() {
 async function inserirProjetos() {
   await prisma.projeto.createMany({
     data: [
-      // Adicione os projetos aqui
+      { 
+        nome: 'Projeto A',
+        descricao: 'Descrição do Projeto A',
+        responsavelId: 5, // ID do funcionário responsável
+        departamentoId: 8, // ID do departamento associado
+        dataInicio: new Date('2024-04-20'),
+        dataFim: new Date('2024-06-30')
+      },
+      { 
+        nome: 'Projeto B',
+        descricao: 'Descrição do Projeto B',
+        responsavelId: 4, // ID do funcionário responsável
+        departamentoId: 9, // ID do departamento associado
+        dataInicio: new Date('2024-05-10'),
+        dataFim: new Date('2024-08-15')
+      },
     ],
   });
 }
@@ -57,7 +72,18 @@ async function inserirProjetos() {
 async function inserirAtividades() {
   await prisma.atividade.createMany({
     data: [
-      // Adicione as atividades aqui
+      { 
+        descricao: 'Atividade 1 do Projeto A',
+        projetoId: 5, // ID do projeto associado
+        dataInicio: new Date('2024-04-20'),
+        dataFim: new Date('2024-05-20')
+      },
+      { 
+        descricao: 'Atividade 2 do Projeto A',
+        projetoId: 6, // ID do projeto associado
+        dataInicio: new Date('2024-05-21'),
+        dataFim: new Date('2024-06-20')
+      },
     ],
   });
 }
@@ -66,12 +92,13 @@ async function inserirAtividades() {
 async function main() {
   try {
     // Inserir dados fictícios
+    await inserirProjetos();
+    await inserirAtividades();
     await inserirDepartamentos();
     await inserirFuncionariosGerentes();
     await atualizarGerentesDepartamentos();
     await inserirFuncionarios();
-    await inserirProjetos();
-    await inserirAtividades();
+    
     
     console.log('Dados fictícios inseridos com sucesso.');
   } catch (error) {
